@@ -8,10 +8,11 @@ namespace FirstMvcDemo.Controllers
 {
     public class HomeController : Controller
     {
+        //http://localhost:xxxx/Home/Index/10?name=James
         // GET: Home
-        public string Index()
+        public string Index(int id, string name)
         {
-            return "Hello MVC 5 Application";
+            return "the value of Id = " + id + "and Name = " + name;
         }
     }
 }
