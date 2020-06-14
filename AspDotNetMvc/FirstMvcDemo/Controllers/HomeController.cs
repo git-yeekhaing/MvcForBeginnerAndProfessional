@@ -12,7 +12,7 @@ namespace FirstMvcDemo.Controllers
         // GET: Home
         public string Index(int id, string name)
         {
-            return "the value of Id = " + id + "and Name = " + name;
+            return "the value of Id = " + id + " and Name = " + Request.QueryString["name"];
         }
     }
 }
