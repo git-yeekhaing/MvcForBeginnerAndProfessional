@@ -10,6 +10,55 @@ namespace myExercises.Controllers
 {
     public class EmployeeController : Controller
     {
+        public ActionResult Method1()
+        {
+            TempData["Name"] = "Pranaya";
+            TempData["Age"] = 30;
+            return View();
+        }
+
+        public ActionResult Method2()
+        {
+            string Name;
+            int Age;
+
+            if (TempData.ContainsKey("Name"))
+            {
+                Name = TempData["Name"].ToString();
+            }
+
+            if (TempData.ContainsKey("Age"))
+            {
+                Age = int.Parse(TempData["Age"].ToString());
+            }
+
+            // we can’t get the same data in the third request 
+            // because TempData will be cleared out after the second request.
+            // to retain the TempData value in the third consecutive request,
+            // we need to call TempData.Keep() method.
+            TempData.Keep();
+
+            return View();
+        }
+        
+        public ActionResult Method3()
+        {
+            string Name;
+            int Age;
+
+            if (TempData.ContainsKey("Name"))
+            {
+                Name = TempData["Name"].ToString();
+            }
+
+            if (TempData.ContainsKey("Age"))
+            {
+                Age = int.Parse(TempData["Age"].ToString());
+            }
+
+            return View();
+        }
+
         // GET: Employee
         public ViewResult Details()
         {
