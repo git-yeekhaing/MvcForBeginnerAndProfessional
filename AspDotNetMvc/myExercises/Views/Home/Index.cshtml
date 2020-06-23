@@ -8,10 +8,6 @@
 </head>
 <body>
 
-    @{ 
-        var employee = ViewData["Employee"] as myExercises.Models.Employee;
-    }
-
     <h2>@ViewData["Header"]</h2>
     <table style="font-family:Arial">
         <tr>
@@ -27,16 +23,12 @@
             <td>@Model.Gender</td>
         </tr>
         <tr>
-            <td>City:</td>
-            <td>@Model.City</td>
+            <td>Department:</td>
+            <td>@Model.Department</td>
         </tr>
         <tr>
             <td>Salary:</td>
             <td>@Model.Salary</td>
-        </tr>
-        <tr>
-            <td>Address:</td>
-            <td>@Model.Address</td>
         </tr>
     </table>
 </body>

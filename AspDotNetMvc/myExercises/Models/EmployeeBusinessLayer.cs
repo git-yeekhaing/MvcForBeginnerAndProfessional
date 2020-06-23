@@ -14,9 +14,8 @@ namespace myExercises.Models
                 EmployeeId = EmployeeId,
                 Name = "Pranaya",
                 Gender = "Male",
-                City = "Mumbai",
-                Salary = 1000,
-                Address = "Andheri"
+                Department = "IT",
+                Salary = 1000
             };
 
             return employee;

@@ -1,0 +1,25 @@
+﻿@model myExercises.Models.ViewModels.EmployeeDetailsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Model.PageTitle</title>
+</head>
+<body>
+    <h1>@Model.PageHeader</h1>
+    <div>EmployeeId : @Model.Emp.EmployeeId</div>
+    <div>Name : @Model.Emp.Name</div>
+    <div>Gender : @Model.Emp.Gender</div>
+    <div>Department : @Model.Emp.Department</div>
+    <div>Salary : @Model.Emp.Salary</div>
+    <h1>Employee Address</h1>
+    <div>City : @Model.Addr.City</div>
+    <div>State : @Model.Addr.State</div>
+    <div>Country : @Model.Addr.Country</div>
+    <div>Pin : @Model.Addr.Pin</div>
+</body>
+</html>
+
